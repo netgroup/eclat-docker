@@ -1,0 +1,3 @@
+[submodule "eclat-daemon"]
+	path = eclat-daemon
+	url = git@github.com:netgroup/eclat-daemon.git
