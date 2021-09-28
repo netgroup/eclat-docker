@@ -4,7 +4,7 @@ CMD ["/sbin/my_init"]
 
 RUN apt update && apt install --yes build-essential git wget  m4 python3 python3-dev python3-setuptools python3-pip libelf-dev tmux iproute2 pkg-config -y
 
-RUN sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 3
+#RUN sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 3
 
 
 RUN wget https://apt.llvm.org/llvm.sh && chmod +x llvm.sh && ./llvm.sh 12
