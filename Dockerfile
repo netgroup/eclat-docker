@@ -18,6 +18,7 @@ RUN mkdir /opt/eclat-daemon
 COPY ./eclat-daemon/requirements.txt .
 RUN pip install -r requirements.txt
 #ADD ./eclat-daemon /opt/eclat-daemon-prod
+#RUN cd /opt/eclat-daemon-prod && pip install -r requirements.txt
 
 
 
