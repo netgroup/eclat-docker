@@ -2,7 +2,7 @@ FROM phusion/baseimage:master
 
 CMD ["/sbin/my_init"]
 
-RUN apt update && apt install --yes build-essential git wget  m4 python3 python3-dev python3-setuptools python3-pip libelf-dev tmux iproute2 pkg-config -y
+RUN apt update && apt install --yes build-essential git wget  m4 python3 python3-dev python3-setuptools python3-pip libelf-dev tmux screen iproute2 pkg-config -y
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 3
 
@@ -19,8 +19,6 @@ COPY ./eclat-daemon/requirements.txt .
 RUN pip install -r requirements.txt
 #ADD ./eclat-daemon /opt/eclat-daemon-prod
 #RUN cd /opt/eclat-daemon-prod && pip install -r requirements.txt
-
-
 
 
 
