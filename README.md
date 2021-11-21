@@ -42,11 +42,3 @@ inside the container:
 cd /opt/eclat-daemon
 scripts/wsl-setup.sh
 ```
-
-```shell
-cd /opt/eclat-daemon
-scripts/wsl-setup.sh
-```
-
-
-
