@@ -23,6 +23,10 @@ On windows (replace c:\Users\Stefano\eclat-docker\ with your path)
 docker run --rm -t -i --privileged --name eclat -v c:\Users\Stefano\eclat-docker\eclat-daemon:/opt/eclat-daemon eclat:latest  /sbin/my_init -- bash -l
 ```
 
+execute a shell on a running container
+```shell
+docker exec -it eclat bash
+```
 
 ## Copy your credentials
 
