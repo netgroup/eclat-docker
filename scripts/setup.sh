@@ -6,7 +6,7 @@
 
 git clone git@github.com:netgroup/eclat-daemon.git
 cd eclat-daemon
-git checkout stefano2
+git checkout main
 
 #on windows/WSL the following commands cannot be executed on
 #the windows host, they must be executed inside the wsl container
