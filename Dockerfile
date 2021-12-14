@@ -2,7 +2,7 @@ FROM phusion/baseimage:master
 
 CMD ["/sbin/my_init"]
 
-RUN apt update && apt install --yes build-essential git wget  m4 python3 python3-dev python3-setuptools python3-pip libelf-dev tmux screen iproute2 pkg-config net-tools iputils-ping tree -y
+RUN apt update && apt install --yes build-essential git wget  m4 python3 python3-dev python3-setuptools python3-pip libelf-dev tmux screen iproute2 pkg-config net-tools iputils-ping tree tcpdump vim -y
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 3
 
