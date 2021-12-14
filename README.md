@@ -74,7 +74,7 @@ docker load < eclat.tar.gz
 ## Create and execute container
 
 ```shell
-docker run --rm -t -i --privileged --name eclat eclat:testbed  /sbin/my_init -- bash -l -c
+docker run --rm -t -i --privileged --name eclat eclat:testbed  /sbin/my_init -- bash -l 
 ```
 
 ## Execute testbed
