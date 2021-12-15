@@ -19,7 +19,7 @@ RUN ln -sv /opt/eclat-daemon/hike_v3/tools/bpftool /usr/local/bin/
 ADD ./eclat-daemon /opt/eclat-daemon
 RUN cd /opt/eclat-daemon && pip install -r requirements.txt && pip install ipython
 
-RUN cd /opt/eclat-daemon/hike_v3/src && make
+#RUN cd /opt/eclat-daemon/hike_v3/src && make
 
 #RUN mkdir /opt/eclat-daemon
 #COPY ./eclat-daemon/requirements.txt .
@@ -27,8 +27,8 @@ RUN cd /opt/eclat-daemon/hike_v3/src && make
 #RUN pip install ipython 
 #RUN make /app
 
-RUN rm -rf /opt/eclat-daemon/.git && rm -rf /opt/eclat-daemon/.git*
-RUN rm -rf /opt/eclat-daemon/hike_v3/.git && rm -rf /opt/eclat-daemon/hike_v3/.git*
+#RUN rm -rf /opt/eclat-daemon/.git && rm -rf /opt/eclat-daemon/.git*
+#RUN rm -rf /opt/eclat-daemon/hike_v3/.git && rm -rf /opt/eclat-daemon/hike_v3/.git*
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

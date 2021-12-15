@@ -7,6 +7,9 @@
 git clone git@github.com:netgroup/eclat-daemon.git
 cd eclat-daemon
 git checkout main
+mkdir components/programs/mynet
+mkdir components/loaders
+cp -r develop/temp-util/basic/ components/loaders/basic
 
 #on windows/WSL the following commands cannot be executed on
 #the windows host, they must be executed inside the wsl container
