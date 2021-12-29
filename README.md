@@ -1,5 +1,7 @@
 # eclat-docker
 
+This project is used to build the container for test and development of the HIKe / eCLAT framework.
+
 ## Instructions to build and execute the container on Linux
 
 ```shell
@@ -70,7 +72,7 @@ scripts/setup.sh
 docker build -t eclat:testbed . --file ./Dockerfile-testbed
 ```
 
-#### Save and Load eclat testbed docker image
+#### Save and Load eCLAT testbed docker image
 
 ```shell
 docker save eclat:testbed | gzip > eclat.tar.gz
