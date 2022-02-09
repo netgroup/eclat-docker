@@ -30,6 +30,11 @@ cd eclat-docker
 scripts/setup.sh
 ```
 #### Build docker Image
+
+```shell
+docker build -t eclat:latest .
+
+#### Create and execute container
 (replace c:\Users\Stefano\eclat-docker\ with your path)
 
 ```shell
