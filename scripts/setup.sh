@@ -4,10 +4,11 @@
 #cd eclat-docker
 #git checkout stefano2
 
-git clone git@github.com:netgroup/eclat-daemon.git
+#git clone git@github.com:netgroup/eclat-daemon.git
+git clone https://github.com/netgroup/eclat-daemon.git
 cd eclat-daemon
 git checkout main
-mkdir components/programs/mynet
+#mkdir components/programs/mynet
 mkdir components/loaders
 cp -r develop/temp-util/basic/ components/loaders/basic
 
@@ -17,9 +18,9 @@ cp -r develop/temp-util/basic/ components/loaders/basic
 #as a workaround, we use a script in eclat-daemon to delete and
 #clone again
 
-git clone git@github.com:netgroup/hike_v3.git
+git clone https://github.com/netgroup/hike_v3.git
 cd hike_v3
 git checkout stefano2_post_v3_2
 git submodule update --init --recursive
 
-git clone git@github.com:netgroup/hike-contribs.git contrib-src
+git clone https://github.com/netgroup/hike-contribs.git contrib-src
