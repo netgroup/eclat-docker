@@ -9,18 +9,18 @@ git clone https://github.com/netgroup/eclat-docker/
 cd eclat-docker
 scripts/setup.sh
 ```
-#### Build docker Image
+#### Build the docker Image
 
 ```shell
 docker build -t eclat:latest .
 ```
-#### Create and execute container
+#### Create and execute the container
 
 ```shell
 docker run --rm -t -i --privileged --name eclat -v $(pwd)/eclat-daemon:/opt/eclat-daemon eclat:latest  /sbin/my_init -- bash -l
 ```
 
-Note that a local folder called eclat-daemon in your host will be linked to a folder in the container.
+Note that a local folder called eclat-daemon in your host will be linked to to the /opt/eclat-daemon folder in the container.
 
 ## Instructions to build and execute the container on Windows with WSL
 
@@ -29,19 +29,20 @@ git clone https://github.com/netgroup/eclat-docker/
 cd eclat-docker
 scripts/setup.sh
 ```
-#### Build docker Image
+#### Build the docker Image
 
 ```shell
 docker build -t eclat:latest .
+```
 
-#### Create and execute container
-(replace c:\Users\Stefano\eclat-docker\ with your path)
+#### Create and execute the container
+(replace c:\Users\Stefano\eclat-docker\ with the path where you have cloned the eclat-docker repository)
 
 ```shell
 docker run --rm -t -i --privileged --name eclat -v c:\Users\Stefano\eclat-docker\eclat-daemon:/opt/eclat-daemon eclat:latest  /sbin/my_init -- bash -l
 ```
 
-Note that a local folder called eclat-daemon in your host will be linked to a folder in the container.
+Note that a local folder called eclat-daemon in your host will be linked to the /opt/eclat-daemon folder in the container.
 
 #### Fix the symbolic links issues in windows
 
