@@ -18,9 +18,10 @@ cp -r develop/temp-util/basic/ components/loaders/basic
 #as a workaround, we use a script in eclat-daemon to delete and
 #clone again
 
-git clone https://github.com/netgroup/hike_v3.git
+git clone https://github.com/netgroup/hike-public
+mv hike-public hike_v3
 cd hike_v3
-git checkout stefano2_post_v3_2
+git checkout hike4eclat
 git submodule update --init --recursive
 
 git clone https://github.com/netgroup/hike-contribs.git contrib-src
