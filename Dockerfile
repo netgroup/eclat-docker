@@ -1,10 +1,9 @@
-FROM phusion/baseimage:master
+FROM ubuntu:21.04
 
-CMD ["/sbin/my_init"]
-
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt install --yes build-essential git wget m4 python3 python3-dev python3-setuptools python3-pip -y
 RUN apt install --yes libelf-dev tmux screen iproute2 pkg-config net-tools iputils-ping tree -y
-RUN apt install --yes tcpdump vim tcpreplay -y
+RUN apt install --yes tcpdump vim tcpreplay software-properties-common -y
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 3
 
@@ -19,21 +18,4 @@ RUN ln -sv /opt/eclat-daemon/hike_v3/tools/bpftool /usr/local/bin/
 ADD ./eclat-daemon /opt/eclat-daemon
 RUN cd /opt/eclat-daemon && pip install -r requirements.txt && pip install ipython
 
-#RUN cd /opt/eclat-daemon/hike_v3/src && make
-
-#RUN mkdir /opt/eclat-daemon
-#COPY ./eclat-daemon/requirements.txt .
-#RUN pip install -r requirements.txt
-#RUN pip install ipython 
-#RUN make /app
-
-#RUN rm -rf /opt/eclat-daemon/.git && rm -rf /opt/eclat-daemon/.git*
-#RUN rm -rf /opt/eclat-daemon/hike_v3/.git && rm -rf /opt/eclat-daemon/hike_v3/.git*
-
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-
-
-
-
-

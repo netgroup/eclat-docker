@@ -17,7 +17,7 @@ docker build -t eclat:latest .
 #### Create and execute the container
 
 ```shell
-docker run --rm -t -i --privileged --name eclat -v $(pwd)/eclat-daemon:/opt/eclat-daemon eclat:latest  /sbin/my_init -- bash -l
+docker run -w /opt/eclat-daemon/ --rm -ti --privileged --name eclat -v $(pwd)/eclat-daemon:/opt/eclat-daemon eclat:latest
 ```
 
 Note that a local folder called eclat-daemon in your host will be linked to to the /opt/eclat-daemon folder in the container.
@@ -39,7 +39,7 @@ docker build -t eclat:latest .
 (replace c:\Users\Stefano\eclat-docker\ with the path where you have cloned the eclat-docker repository)
 
 ```shell
-docker run --rm -t -i --privileged --name eclat -v c:\Users\Stefano\eclat-docker\eclat-daemon:/opt/eclat-daemon eclat:latest  /sbin/my_init -- bash -l
+docker run -w /opt/eclat-daemon/ --rm -t -i --privileged --name eclat -v c:\Users\Stefano\eclat-docker\eclat-daemon:/opt/eclat-daemon eclat:latest
 ```
 
 Note that a local folder called eclat-daemon in your host will be linked to the /opt/eclat-daemon folder in the container.
