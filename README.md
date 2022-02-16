@@ -33,6 +33,7 @@ scripts/setup.sh
 ```
 #### Build the docker Image
 
+In windows command line, go in the eclat-docker folder and run:
 ```shell
 docker build -t eclat:latest .
 ```
