@@ -104,3 +104,14 @@ docker run --rm -t -i --privileged --name eclat eclat:testbed  /sbin/my_init -- 
 cd /opt/eclat-daemon
 python -m unittest test.test_parser
 ```
+
+#### Development of eCLAT packages
+
+By default, eCLAT packages repositories are cloned using https: addresses as git remotes. If you want to push changes to an eCLAT package repository, you might want to set the git origin to SSH (you need write permissions for the repository). You can do this using the following script:
+
+```
+scripts/git-origin-ssh.sh
+```
+
+The script needs to be executed from the folder in the components folder, using the proper relative path to call it.
+
