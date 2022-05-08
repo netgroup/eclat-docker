@@ -65,9 +65,9 @@ docker exec -it eclat bash
 ```
 #### Copy your credentials (needed for development)
 
-Copy a file named /opt/eclat-daemon/scripts/temp_credentials/github_rsa with your private key to the home folder of the root user.
+Copy a file named `github_rsa` with your private key in the folder `/opt/eclat-daemon/scripts/temp_credentials/`
 
-inside the container:
+Run the following script inside the container (the script copies the credentials in the home folder of the root user) :
 
 ```shell
 cd /opt/eclat-daemon
