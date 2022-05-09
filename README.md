@@ -1,6 +1,7 @@
 # eclat-docker
 
 This project is used to build the container for test and development of the HIKe / eCLAT framework.
+See the user documentation here: https://hike-eclat.readthedocs.io/
 
 ## Instructions to build and execute the container on Linux
 
