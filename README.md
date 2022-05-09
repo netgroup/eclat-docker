@@ -64,6 +64,10 @@ scripts/setup-wsl.sh
 ```shell
 docker exec -it eclat bash
 ```
+#### How to perform the example experiments in the container
+
+Please see: https://hike-eclat.readthedocs.io/en/latest/experiments.html
+
 #### Copy your credentials (needed for development)
 
 Copy a file named `github_rsa` with your private key in the folder `/opt/eclat-daemon/scripts/temp_credentials/`
