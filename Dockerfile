@@ -2,7 +2,7 @@ FROM ubuntu:21.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt install --yes build-essential git wget m4 python3 python3-dev python3-setuptools python3-pip -y
-RUN apt install --yes libelf-dev tmux screen iproute2 pkg-config net-tools iputils-ping tree -y
+RUN apt install --yes libelf-dev tmux screen iproute2 pkg-config net-tools iputils-ping tree clang-format -y
 RUN apt install --yes tcpdump vim tcpreplay software-properties-common jq -y
 RUN apt install --yes nano netcat -y
 
