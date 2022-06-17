@@ -3,6 +3,11 @@
 This project is used to build the container for test and development of the HIKe / eCLAT framework.
 See the user documentation here: https://hike-eclat.readthedocs.io/
 
+The main source code repositories are:
+
+* [eclat-daemon](https://github.com/netgroup/eclat-daemon) (eCLAT daemon, CLI, eCLAT language parser)
+* [HIKe](https://github.com/netgroup/hike-public) (HIKe core functionality)
+
 ## Instructions to build and execute the container on Linux
 
 ```shell
