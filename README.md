@@ -45,10 +45,10 @@ docker build -t eclat:latest .
 ```
 
 #### Create and execute the container
-(replace c:\Users\Stefano\eclat-docker\ with the path where you have cloned the eclat-docker repository)
+In windows command line, in the eclat-docker folder, run:
 
 ```shell
-docker run -w /opt/eclat-daemon/ --rm -t -i --privileged --init --name eclat -v c:\Users\Stefano\eclat-docker\eclat-daemon:/opt/eclat-daemon eclat:latest
+docker run -w /opt/eclat-daemon/ --rm -t -i --privileged --init --name eclat -v %cd%\eclat-daemon:/opt/eclat-daemon eclat:latest
 ```
 
 Note that a local folder called eclat-daemon in your host will be linked to the /opt/eclat-daemon folder in the container.
