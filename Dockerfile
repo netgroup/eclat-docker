@@ -15,7 +15,7 @@ RUN update-alternatives --install /usr/bin/clang clang /usr/bin/clang-12 100
 RUN update-alternatives --install /usr/bin/llvm-objdump llvm-objdump /usr/bin/llvm-objdump-12 100
 RUN update-alternatives --install /usr/bin/llvm-objcopy llvm-objcopy /usr/bin/llvm-objcopy-12 100
 
-RUN ln -sv /opt/eclat-daemon/hike_v3/tools/bpftool /usr/local/bin/
+RUN ln -sv /opt/eclat-daemon/hike/tools/bpftool /usr/local/bin/
 
 ADD ./eclat-daemon /opt/eclat-daemon
 RUN cd /opt/eclat-daemon && pip install -r requirements.txt && pip install ipython
