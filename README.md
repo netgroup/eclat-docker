@@ -83,7 +83,7 @@ Run the following script inside the container (the script copies the credentials
 cd /opt/eclat-daemon
 scripts/copy-credentials.sh
 ```
-It is also useful to globally configure the git email and name, this can be done using two optiona parameters:
+It is also useful to globally configure the git email and name, this can be done using two optional parameters:
 
 ```shell
 cd /opt/eclat-daemon
