@@ -53,9 +53,9 @@ docker run -w /opt/eclat-daemon/ --rm -t -i --privileged --init --name eclat -v 
 
 Note that a local folder called eclat-daemon in your host will be linked to the /opt/eclat-daemon folder in the container.
 
-#### Fix the symbolic links issues in windows
+#### IMPORTANT: Fix the symbolic links issues in windows
 
-inside the container:
+Immediately after that the contatiner is created with the above command, inside the container you have to run:
 
 ```shell
 cd /opt/eclat-daemon
@@ -82,6 +82,12 @@ Run the following script inside the container (the script copies the credentials
 ```shell
 cd /opt/eclat-daemon
 scripts/copy-credentials.sh
+```
+It is also useful to globally configure the git email and name, this can be done using two optiona parameters:
+
+```shell
+cd /opt/eclat-daemon
+scripts/copy-credentials.sh you@example.com "Your Name"
 ```
 
 #### Build docker Image for Testbed
