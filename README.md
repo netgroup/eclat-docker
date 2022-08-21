@@ -129,5 +129,9 @@ By default, eCLAT packages repositories are cloned using https: addresses as git
 scripts/git-origin-ssh.sh
 ```
 
-The script needs to be executed from the folder in the components folder, using the proper relative path to call it.
+The script needs to be executed from the main folder of the package in the components folder, using the proper relative path to call it. For example, considering a package called eip:
 
+```
+cd /opt/eclat-daemon/components/eip
+../../scripts/git-origin-ssh.sh
+```
