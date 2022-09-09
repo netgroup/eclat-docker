@@ -21,3 +21,4 @@ ADD ./eclat-daemon /opt/eclat-daemon
 RUN cd /opt/eclat-daemon && pip install -r requirements.txt && pip install ipython
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN echo "alias eclat='python eclat.py'" >> $HOME/.bash_aliases
