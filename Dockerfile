@@ -10,11 +10,11 @@ RUN apt install --yes libc6-dev-i386 -y
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 3
 
 
-RUN wget https://apt.llvm.org/llvm.sh && chmod +x llvm.sh && ./llvm.sh 12
+RUN wget https://apt.llvm.org/llvm.sh && chmod +x llvm.sh && ./llvm.sh 16
 
-RUN update-alternatives --install /usr/bin/clang clang /usr/bin/clang-12 100
-RUN update-alternatives --install /usr/bin/llvm-objdump llvm-objdump /usr/bin/llvm-objdump-12 100
-RUN update-alternatives --install /usr/bin/llvm-objcopy llvm-objcopy /usr/bin/llvm-objcopy-12 100
+RUN update-alternatives --install /usr/bin/clang clang /usr/bin/clang-16 100
+RUN update-alternatives --install /usr/bin/llvm-objdump llvm-objdump /usr/bin/llvm-objdump-16 100
+RUN update-alternatives --install /usr/bin/llvm-objcopy llvm-objcopy /usr/bin/llvm-objcopy-16 100
 
 RUN ln -sv /opt/eclat-daemon/hike/tools/bpftool /usr/local/bin/
 
